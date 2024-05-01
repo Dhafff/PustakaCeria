@@ -1,0 +1,54 @@
+{  
+  [
+    {
+      "Judul": "Laskar Pelangi",
+      "Penulis": "Andrea Hirata",
+      "Genre": "Fiksi"
+    },
+    {
+      "Judul": "Bumi Manusia",
+      "Penulis": "Pramoedya Ananta Toer",
+      "Genre": "Fiksi"
+    },
+    {
+      "Judul": "Dilan 1990",
+      "Penulis": "Pidi Baiq",
+      "Genre": "Fiksi"
+    },
+    {
+      "Judul": "Koala Kumal",
+      "Penulis": "Raditya Dika",
+      "Genre": "Fiksi"
+    },
+    {
+      "Judul": "5 cm",
+      "Penulis": "Dhonny Dhirgantoro",
+      "Genre": "Fiksi"
+    },
+    {
+      "Judul": "Autobiografi Tan Malaka: Dari Penjara Ke Penjara",
+      "Penulis": "Tan Malaka",
+      "Genre": "Non-Fiksi"
+    },
+    {
+      "Judul": "Atomic Habits",
+      "Penulis": "James Clear",
+      "Genre": "Non-Fiksi"
+    },
+    {
+      "Judul": "Soekarno: Biografi Singkat 1901 – 1970",
+      "Penulis": "Taufik Adi Susilo",
+      "Genre": "Non-Fiksi"
+    },
+    {
+      "Judul": "Rudy: Kisah Masa Muda Sang Visioner",
+      "Penulis": "Gina S Noer",
+      "Genre": "Non-Fiksi"
+    },
+    {
+      "Judul": "Autobiografi Mahatma Gandhi",
+      "Penulis": "Mahatma Gandhi",
+      "Genre": "Non-Fiksi"
+    }
+  ]
+}
