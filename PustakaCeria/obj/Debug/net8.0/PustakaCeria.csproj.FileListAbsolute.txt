@@ -1,0 +1,14 @@
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\bin\Debug\net8.0\PustakaCeria.exe
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\bin\Debug\net8.0\PustakaCeria.deps.json
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\bin\Debug\net8.0\PustakaCeria.runtimeconfig.json
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\bin\Debug\net8.0\PustakaCeria.dll
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\bin\Debug\net8.0\PustakaCeria.pdb
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\obj\Debug\net8.0\PustakaCeria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\obj\Debug\net8.0\PustakaCeria.AssemblyInfoInputs.cache
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\obj\Debug\net8.0\PustakaCeria.AssemblyInfo.cs
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\obj\Debug\net8.0\PustakaCeria.csproj.CoreCompileInputs.cache
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\obj\Debug\net8.0\PustakaCeria.dll
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\obj\Debug\net8.0\refint\PustakaCeria.dll
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\obj\Debug\net8.0\PustakaCeria.pdb
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\obj\Debug\net8.0\PustakaCeria.genruntimeconfig.cache
+C:\Users\dhafg\source\repos\PustakaCeria\PustakaCeria\obj\Debug\net8.0\ref\PustakaCeria.dll
