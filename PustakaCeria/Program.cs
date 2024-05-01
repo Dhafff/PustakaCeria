@@ -1,9 +1,21 @@
 ﻿using System;
+using PustakaCeria.Menu;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
+        // ... Instance per kelas
+        PencarianBuku cariBuku = new PencarianBuku();
+        ManajemenStokBuku manajemenBuku = new ManajemenStokBuku();
+        NotifikasiKeterlambatanPengembalian notifikasi = new NotifikasiKeterlambatanPengembalian();
+        PeminjamanDanPengambalianBuku peminjamanBuku = new PeminjamanDanPengambalianBuku();
+        ManajemenAnggota manajemenAnggota = new ManajemenAnggota();
+        Pengaturan pengaturan = new Pengaturan();
+        RiwayatPeminjaman riwayat = new RiwayatPeminjaman();
+        StatistikPenggunaanBuku statistik = new StatistikPenggunaanBuku();
+
+        // ... Ambil pesan welcome
         string welcomeMsg = GetWelcomeMessage();
 
         Console.WriteLine(welcomeMsg);
