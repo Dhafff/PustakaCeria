@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PustakaCeria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50756a2c926e8a40fbca3ee438de2b82592db739")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09e2d9e74d9c4132cc11c85cc7e8b1672ab8d06f")]
 [assembly: System.Reflection.AssemblyProductAttribute("PustakaCeria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PustakaCeria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
