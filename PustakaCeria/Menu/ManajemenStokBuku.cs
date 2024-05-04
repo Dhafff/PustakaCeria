@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.IO;
-using System.Xml;
 using Newtonsoft.Json;
 using Formatting = Newtonsoft.Json.Formatting;
 
@@ -18,9 +18,16 @@ namespace PustakaCeria.Menu
 
         public void TambahBuku(Buku buku)
         {
+            Contract.Requires<ArgumentNullException>(buku != null, "Buku tidak boleh kosong");
+            Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(buku.Judul), "Judul buku tidak boleh kosong");
+            Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(buku.Penulis), "Penulis buku tidak boleh kosong");
+            Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(buku.Genre), "Genre buku tidak boleh kosong");
+
             List<Buku> bukus = LoadBuku();
             bukus.Add(buku);
             SaveBuku(bukus);
+
+            Contract.Ensures(LihatBuku().Contains(buku), "Buku harus ditambahkan");
         }
 
         private Buku InputBuku()
@@ -37,6 +44,8 @@ namespace PustakaCeria.Menu
 
         public void HapusBuku(string judul)
         {
+            Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(judul), "Judul buku tidak boleh kosong");
+
             List<Buku> bukus = LoadBuku();
             Buku bukuToRemove = bukus.Find(b => b.Judul.Equals(judul));
             if (bukuToRemove != null)
@@ -53,13 +62,15 @@ namespace PustakaCeria.Menu
 
         public void EditBuku(string judul, Buku newBukuData)
         {
+            Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(judul), "Judul buku tidak boleh kosong");
+            Contract.Requires<ArgumentNullException>(newBukuData != null, "Data buku baru tidak boleh kosong");
+
             List<Buku> bukus = LoadBuku();
             Buku bukuToEdit = bukus.Find(b => b.Judul.Equals(judul));
             if (bukuToEdit != null)
             {
                 bukuToEdit.Penulis = newBukuData.Penulis;
                 bukuToEdit.Genre = newBukuData.Genre;
-                // Update properti lain sesuai kebutuhan
                 SaveBuku(bukus);
             }
             else
@@ -75,7 +86,6 @@ namespace PustakaCeria.Menu
             {
                 string json = File.ReadAllText(filePath);
                 List<Buku> bukus = JsonConvert.DeserializeObject<List<Buku>>(json);
-                // Set Id berdasarkan indeks dalam array
                 for (int i = 0; i < bukus.Count; i++)
                 {
                     bukus[i].Id = i + 1;
@@ -89,7 +99,6 @@ namespace PustakaCeria.Menu
                 return new List<Buku>();
             }
         }
-
 
         private void SaveBuku(List<Buku> bukus)
         {
@@ -109,7 +118,7 @@ namespace PustakaCeria.Menu
                 Console.WriteLine("3. Hapus Buku");
                 Console.WriteLine("4. Edit Informasi Buku");
                 Console.WriteLine("0. Kembali ke Menu Utama");
-                Console.WriteLine("====================================="); 
+                Console.WriteLine("=====================================");
                 Console.WriteLine();
 
                 int pilihMenu = BacaInputMenu("Masukkan nomor menu yang dipilih: ");
@@ -139,7 +148,7 @@ namespace PustakaCeria.Menu
                     case 2:
                         // Menambah buku baru
                         Console.WriteLine();
-                        Console.WriteLine("Masukkan informasi buku baru: ");
+                        Console.WriteLine("Masukkan informasi buku baru");
                         Buku bukuBaru = InputBuku();
                         TambahBuku(bukuBaru);
                         Console.WriteLine("Buku berhasil ditambahkan.");
@@ -156,7 +165,7 @@ namespace PustakaCeria.Menu
                         Console.WriteLine();
                         Console.Write("Masukkan judul buku yang akan diedit: ");
                         string judulBukuDiubah = Console.ReadLine();
-                        Console.WriteLine("Masukkan informasi baru untuk buku: ");
+                        Console.WriteLine("Masukkan informasi baru untuk buku");
                         Buku dataBukuBaru = InputBuku();
                         EditBuku(judulBukuDiubah, dataBukuBaru);
                         Console.WriteLine("Informasi buku berhasil diperbarui.");
@@ -204,5 +213,5 @@ namespace PustakaCeria.Menu
         {
             return $"Id: {Id}, Judul: {Judul}, Penulis: {Penulis}, Genre: {Genre}";
         }
-    }    
+    }
 }
