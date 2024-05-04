@@ -115,12 +115,8 @@ internal class Program
                     Console.Clear();
                     break;
                 case 7:
-                    // ... Menu manajemen stok buku
-                    Console.WriteLine("===== Menu Manejemen Stok Buku =====");
-                    Console.WriteLine();
-                    // ... Class menu manajemen stok buku
-                    Console.WriteLine();
-                    Console.WriteLine("====================================");
+                    // ... Menu manajemen stok buku                    
+                    manajemenBuku.TampilkanMenu();
                     Console.WriteLine();
                     Console.WriteLine("Tekan tombol apa pun untuk kembali ke menu utama.");
                     Console.ReadKey();
