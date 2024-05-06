@@ -71,6 +71,7 @@ internal class Program
                     Console.WriteLine("===== Menu Manajemen Anggota Perpustakaan =====");
                     Console.WriteLine();
                     // ... Class menu manajemen anggota
+                    manajemenAnggota.TampilMenu();
                     Console.WriteLine();
                     Console.WriteLine("===============================================");
                     Console.WriteLine();
