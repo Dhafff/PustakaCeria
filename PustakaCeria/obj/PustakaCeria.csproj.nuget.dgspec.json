@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj": {}
+    "c:\\Users\\avisenna\\Downloads\\Coba\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj": {
+    "c:\\Users\\avisenna\\Downloads\\Coba\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj",
+        "projectUniqueName": "c:\\Users\\avisenna\\Downloads\\Coba\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj",
         "projectName": "PustakaCeria",
-        "projectPath": "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj",
-        "packagesPath": "C:\\Users\\dhafg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\PustakaCeria\\obj\\",
+        "projectPath": "c:\\Users\\avisenna\\Downloads\\Coba\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj",
+        "packagesPath": "C:\\Users\\avisenna\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\avisenna\\Downloads\\Coba\\PustakaCeria\\PustakaCeria\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dhafg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\avisenna\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
