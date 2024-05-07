@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,9 +26,9 @@ namespace PustakaCeria.Menu
 
             List<Anggota> anggotas = LoadAnggota();
             anggotas.Add(anggota);
-            SaveBuku(anggotas);
+            SaveAnggota(anggotas);
 
-            Contract.Ensures(LihatBuku().Contains(anggota), "Data harus ditambahkan");
+            Contract.Ensures(LihatAnggota().Contains(anggota), "Data harus ditambahkan");
         }
 
         private Anggota InputAnggota()
@@ -43,7 +45,7 @@ namespace PustakaCeria.Menu
 
         public void HapusAnggota(string nama)
         {
-            Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(judul), "Nama tidak boleh kosong");
+            Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(nama), "Nama tidak boleh kosong");
 
             List<Anggota> anggotas = LoadAnggota();
             Anggota anggotaToRemove = anggotas.Find(a => a.Nama.Equals(nama));
