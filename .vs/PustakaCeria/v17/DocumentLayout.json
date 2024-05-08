@@ -5,6 +5,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|c:\\users\\dhafg\\source\\repos\\pustakaceria\\pustakaceria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|solutionrelative:pustakaceria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|c:\\users\\dhafg\\source\\repos\\pustakaceria\\pustakaceria\\menu\\manajemenstokbuku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|solutionrelative:pustakaceria\\menu\\manajemenstokbuku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|c:\\users\\dhafg\\source\\repos\\pustakaceria\\pustakaceria\\menu\\manajemenanggota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|solutionrelative:pustakaceria\\menu\\manajemenanggota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A410F1CF-D051-4204-857B-5248A7C98EF3}|ManajemenBukuLibraries\\ManajemenBukuLibraries.csproj|c:\\users\\dhafg\\source\\repos\\pustakaceria\\manajemenbukulibraries\\buku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A410F1CF-D051-4204-857B-5248A7C98EF3}|ManajemenBukuLibraries\\ManajemenBukuLibraries.csproj|solutionrelative:manajemenbukulibraries\\buku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +26,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Buku.cs",
+              "DocumentMoniker": "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\ManajemenBukuLibraries\\Buku.cs",
+              "RelativeDocumentMoniker": "ManajemenBukuLibraries\\Buku.cs",
+              "ToolTip": "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\ManajemenBukuLibraries\\Buku.cs",
+              "RelativeToolTip": "ManajemenBukuLibraries\\Buku.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T01:16:05.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManajemenAnggota.cs",
+              "DocumentMoniker": "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\PustakaCeria\\Menu\\ManajemenAnggota.cs",
+              "RelativeDocumentMoniker": "PustakaCeria\\Menu\\ManajemenAnggota.cs",
+              "ToolTip": "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\PustakaCeria\\Menu\\ManajemenAnggota.cs",
+              "RelativeToolTip": "PustakaCeria\\Menu\\ManajemenAnggota.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T01:11:34.216Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -28,9 +78,22 @@
               "RelativeDocumentMoniker": "PustakaCeria\\Program.cs",
               "ToolTip": "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\PustakaCeria\\Program.cs",
               "RelativeToolTip": "PustakaCeria\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAcAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEkAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T09:42:50.085Z",
+              "WhenOpened": "2024-05-07T06:05:33.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ManajemenStokBuku.cs",
+              "DocumentMoniker": "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\PustakaCeria\\Menu\\ManajemenStokBuku.cs",
+              "RelativeDocumentMoniker": "PustakaCeria\\Menu\\ManajemenStokBuku.cs",
+              "ToolTip": "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\PustakaCeria\\Menu\\ManajemenStokBuku.cs",
+              "RelativeToolTip": "PustakaCeria\\Menu\\ManajemenStokBuku.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T06:05:29.338Z",
               "EditorCaption": ""
             }
           ]
