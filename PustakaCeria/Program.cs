@@ -117,7 +117,7 @@ internal class Program
                     // ... Menu riwayat peminjaman
                     Console.WriteLine("===== Menu Riwayat Peminjaman =====");
                     Console.WriteLine();
-                    // ... Class menu riwayat peminjaman
+                    riwayat.PrintRiwayat();
                     Console.WriteLine();
                     Console.WriteLine("===================================");
                     Console.WriteLine();

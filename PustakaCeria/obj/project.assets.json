@@ -55,19 +55,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\malfa\\.nuget\\packages\\": {}
+    "C:\\Users\\Keivan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj",
+      "projectUniqueName": "C:\\Users\\Keivan\\Source\\Repos\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj",
       "projectName": "PustakaCeria",
-      "projectPath": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj",
-      "packagesPath": "C:\\Users\\malfa\\.nuget\\packages\\",
-      "outputPath": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\obj\\",
+      "projectPath": "C:\\Users\\Keivan\\Source\\Repos\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj",
+      "packagesPath": "C:\\Users\\Keivan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Keivan\\Source\\Repos\\PustakaCeria\\PustakaCeria\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\malfa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Keivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -87,11 +87,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -119,16 +114,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
