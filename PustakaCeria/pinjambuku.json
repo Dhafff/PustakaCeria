@@ -1,0 +1,46 @@
+{
+    "daftarBuku": [
+      {
+        "Judul": "Laskar Pelangi",
+        "Dipinjam": false
+      },
+      {
+        "Judul": "Bumi Manusia",
+        "Dipinjam": false
+      },
+      {
+        "Judul": "Dilan 1990",
+        "Dipinjam": false
+      },
+      {
+        "Judul": "Koala Kumal",
+        "Dipinjam": false
+      },
+      {
+        "Judul": "5 cm",
+        "Dipinjam": false
+      },
+      {
+        "Judul": "Autobiografi Tan Malaka: Dari Penjara Ke Penjara",
+        "Dipinjam": false
+      },
+      {
+        "Judul": "Atomic Habits",
+        "Dipinjam": false
+      },
+      {
+        "Judul": "Soekarno: Biografi Singkat 1901 – 1970",
+        "Dipinjam": false
+      },
+      {
+        "Judul": "Rudy: Kisah Masa Muda Sang Visioner",
+        "Dipinjam": false
+      },
+      {
+        "Judul": "Autobiografi Mahatma Gandhi",
+        "Dipinjam": false
+      }
+
+    ]
+  }
+  
