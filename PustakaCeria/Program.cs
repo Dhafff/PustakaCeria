@@ -20,7 +20,7 @@ internal class Program
 
         Console.WriteLine(welcomeMsg);
         Console.WriteLine();
-
+        
         bool exitReq = false;
 
         while (!exitReq)
