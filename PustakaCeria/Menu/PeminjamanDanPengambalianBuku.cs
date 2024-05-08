@@ -1,4 +1,9 @@
-﻿namespace PustakaCeria.Menu
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+namespace PustakaCeria.Menu
 {
     public class Buku
     {
@@ -8,6 +13,12 @@
     public class PeminjamanDanPengambalianBuku
     {
         private List<Buku> daftarBuku = new List<Buku>();
+
+        public PeminjamanDanPengembalianBuku(string jsonPath)
+        {
+            string jsonData = File.ReadAllText(jsonPath);
+            daftarBuku = JsonConvert.DeserializeObject<List<Buku>>(jsonData);
+        }
 
         public void TambahBuku(string judul)
         {
@@ -60,22 +71,38 @@
         {
             return daftarBuku.Find(b => b.Judul == judul);
         }
+         public void SimpanKeJSON(string jsonPath)
+        {
+            string jsonData = JsonConvert.SerializeObject(daftarBuku, Formatting.Indented);
+            File.WriteAllText(jsonPath, jsonData);
+        }
 
         public static void Main(string[] args)
         {
-            PeminjamanDanPengambalianBuku perpustakaan = new PeminjamanDanPengambalianBuku();
-            perpustakaan.TambahBuku("Harry Potter");
-            perpustakaan.TambahBuku("Lord of the Rings");
+            PeminjamanDanPengambalianBuku perpustakaan = new PeminjamanDanPengambalianBuku(jsonPath);
+            perpustakaan.PinjamBuku("Laskar Pelangi");
+            perpustakaan.PinjamBuku("Bumi Manusia");
+            perpustakaan.PinjamBuku("Dilan 1990");
+            perpustakaan.PinjamBuku("5 cm");
+            perpustakaan.PinjamBuku("Autobiografi Tan Malaka: Dari Penjara Ke Penjara");
+            perpustakaan.PinjamBuku("Atomic Habits");
+            perpustakaan.PinjamBuku("Soekarno: Biografi Singkat 1901 – 1970");
+            perpustakaan.PinjamBuku("Rudy: Kisah Masa Muda Sang Visioner");
+            perpustakaan.PinjamBuku("Autobiografi Mahatma Gandhi");
 
-            perpustakaan.PinjamBuku("Harry Potter");
-            perpustakaan.PinjamBuku("Lord of the Rings");
-            perpustakaan.PinjamBuku("Lord of the Rings");
+            perpustakaan.KembalikanBuku("Laskar Pelangi");
+            perpustakaan.KembalikanBuku("Bumi Manusia");
+            perpustakaan.KembalikanBuku("Dilan 1990");
+            perpustakaan.KembalikanBuku("5 cm");
+            perpustakaan.KembalikanBuku("Autobiografi Tan Malaka: Dari Penjara Ke Penjara");
+            perpustakaan.KembalikanBuku("Atomic Habits");
+            perpustakaan.KembalikanBuku("Soekarno: Biografi Singkat 1901 – 1970");
+            perpustakaan.KembalikanBuku("Rudy: Kisah Masa Muda Sang Visioner");
+            perpustakaan.KembalikanBuku("Autobiografi Mahatma Gandhi");
 
-            perpustakaan.KembalikanBuku("Harry Potter");
-            perpustakaan.KembalikanBuku("Lord of the Rings");
-            perpustakaan.KembalikanBuku("Harry Potter");
-
+            perpustakaan.SimpanKeJSON(jsonPath);
             Console.ReadLine();
         }
+        
     }
 }

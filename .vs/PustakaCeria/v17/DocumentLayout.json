@@ -7,6 +7,30 @@
       "RelativeMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|solutionrelative:pustakaceria\\menu\\peminjamandanpengambalianbuku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|e:\\kuliah\\kpl\\tubes\\pustakaceria\\pustakaceria\\menu\\manajemenstokbuku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|solutionrelative:pustakaceria\\menu\\manajemenstokbuku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|e:\\kuliah\\kpl\\tubes\\pustakaceria\\pustakaceria\\menu\\manajemenanggota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|solutionrelative:pustakaceria\\menu\\manajemenanggota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|e:\\kuliah\\kpl\\tubes\\pustakaceria\\pustakaceria\\menu\\notifikasiketerlambatanpengembalian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|solutionrelative:pustakaceria\\menu\\notifikasiketerlambatanpengembalian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|e:\\kuliah\\kpl\\tubes\\pustakaceria\\pustakaceria\\menu\\pencarianbuku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|solutionrelative:pustakaceria\\menu\\pencarianbuku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|e:\\kuliah\\kpl\\tubes\\pustakaceria\\pustakaceria\\menu\\pengaturan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|solutionrelative:pustakaceria\\menu\\pengaturan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|e:\\kuliah\\kpl\\tubes\\pustakaceria\\pustakaceria\\menu\\riwayatpeminjaman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|solutionrelative:pustakaceria\\menu\\riwayatpeminjaman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|e:\\kuliah\\kpl\\tubes\\pustakaceria\\pustakaceria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{644C37F8-57A4-486F-99FE-97A7327C95FD}|PustakaCeria\\PustakaCeria.csproj|solutionrelative:pustakaceria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,11 +42,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ManajemenStokBuku.cs",
+              "DocumentMoniker": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Menu\\ManajemenStokBuku.cs",
+              "RelativeDocumentMoniker": "PustakaCeria\\Menu\\ManajemenStokBuku.cs",
+              "ToolTip": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Menu\\ManajemenStokBuku.cs",
+              "RelativeToolTip": "PustakaCeria\\Menu\\ManajemenStokBuku.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T05:28:28.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManajemenAnggota.cs",
+              "DocumentMoniker": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Menu\\ManajemenAnggota.cs",
+              "RelativeDocumentMoniker": "PustakaCeria\\Menu\\ManajemenAnggota.cs",
+              "ToolTip": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Menu\\ManajemenAnggota.cs",
+              "RelativeToolTip": "PustakaCeria\\Menu\\ManajemenAnggota.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T05:28:27.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotifikasiKeterlambatanPengembalian.cs",
+              "DocumentMoniker": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Menu\\NotifikasiKeterlambatanPengembalian.cs",
+              "RelativeDocumentMoniker": "PustakaCeria\\Menu\\NotifikasiKeterlambatanPengembalian.cs",
+              "ToolTip": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Menu\\NotifikasiKeterlambatanPengembalian.cs",
+              "RelativeToolTip": "PustakaCeria\\Menu\\NotifikasiKeterlambatanPengembalian.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T05:28:17.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PencarianBuku.cs",
+              "DocumentMoniker": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Menu\\PencarianBuku.cs",
+              "RelativeDocumentMoniker": "PustakaCeria\\Menu\\PencarianBuku.cs",
+              "ToolTip": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Menu\\PencarianBuku.cs",
+              "RelativeToolTip": "PustakaCeria\\Menu\\PencarianBuku.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T05:28:11.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Pengaturan.cs",
+              "DocumentMoniker": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Menu\\Pengaturan.cs",
+              "RelativeDocumentMoniker": "PustakaCeria\\Menu\\Pengaturan.cs",
+              "ToolTip": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Menu\\Pengaturan.cs",
+              "RelativeToolTip": "PustakaCeria\\Menu\\Pengaturan.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T05:28:08.673Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -32,14 +121,31 @@
               "RelativeDocumentMoniker": "PustakaCeria\\Menu\\PeminjamanDanPengambalianBuku.cs",
               "ToolTip": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Menu\\PeminjamanDanPengambalianBuku.cs",
               "RelativeToolTip": "PustakaCeria\\Menu\\PeminjamanDanPengambalianBuku.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAfAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T05:45:43.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
+              "Title": "RiwayatPeminjaman.cs",
+              "DocumentMoniker": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Menu\\RiwayatPeminjaman.cs",
+              "RelativeDocumentMoniker": "PustakaCeria\\Menu\\RiwayatPeminjaman.cs",
+              "ToolTip": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Menu\\RiwayatPeminjaman.cs",
+              "RelativeToolTip": "PustakaCeria\\Menu\\RiwayatPeminjaman.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T05:28:07.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\Program.cs",
               "RelativeDocumentMoniker": "PustakaCeria\\Program.cs",
@@ -47,7 +153,8 @@
               "RelativeToolTip": "PustakaCeria\\Program.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAQwAkAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T09:42:50.085Z"
+              "WhenOpened": "2024-04-30T09:42:50.085Z",
+              "EditorCaption": ""
             }
           ]
         }
