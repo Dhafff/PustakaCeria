@@ -9,28 +9,28 @@ namespace PustakaCeria.Menu
 {
     public class ManajemenStokBuku
     {
-        private string filePath = "../../../Buku.json";
+        private string filePath = "../../../Buku.json";        
 
-        public List<Buku> LihatBuku()
+        public List<ManajemenBukuLibraries.Buku> LihatBuku()
         {
             return LoadBuku();
         }
 
-        public void TambahBuku(Buku buku)
+        public void TambahBuku(ManajemenBukuLibraries.Buku buku)
         {
             Contract.Requires<ArgumentNullException>(buku != null, "Buku tidak boleh kosong");
             Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(buku.Judul), "Judul buku tidak boleh kosong");
             Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(buku.Penulis), "Penulis buku tidak boleh kosong");
             Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(buku.Genre), "Genre buku tidak boleh kosong");
 
-            List<Buku> bukus = LoadBuku();
+            List<ManajemenBukuLibraries.Buku> bukus = LoadBuku();
             bukus.Add(buku);
             SaveBuku(bukus);
 
             Contract.Ensures(LihatBuku().Contains(buku), "Buku harus ditambahkan");
         }
 
-        private Buku InputBuku()
+        private ManajemenBukuLibraries.Buku InputBuku()
         {
             Console.Write("Judul: ");
             string judul = Console.ReadLine();
@@ -39,15 +39,15 @@ namespace PustakaCeria.Menu
             Console.Write("Genre: ");
             string genre = Console.ReadLine();
 
-            return new Buku { Judul = judul, Penulis = penulis, Genre = genre };
+            return new ManajemenBukuLibraries.Buku { Judul = judul, Penulis = penulis, Genre = genre };
         }
 
         public void HapusBuku(string judul)
         {
             Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(judul), "Judul buku tidak boleh kosong");
 
-            List<Buku> bukus = LoadBuku();
-            Buku bukuToRemove = bukus.Find(b => b.Judul.Equals(judul));
+            List<ManajemenBukuLibraries.Buku> bukus = LoadBuku();
+            ManajemenBukuLibraries.Buku bukuToRemove = bukus.Find(b => b.Judul.Equals(judul));
             if (bukuToRemove != null)
             {
                 bukus.Remove(bukuToRemove);
@@ -60,13 +60,13 @@ namespace PustakaCeria.Menu
             }
         }
 
-        public void EditBuku(string judul, Buku newBukuData)
+        public void EditBuku(string judul, ManajemenBukuLibraries.Buku newBukuData)
         {
             Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(judul), "Judul buku tidak boleh kosong");
             Contract.Requires<ArgumentNullException>(newBukuData != null, "Data buku baru tidak boleh kosong");
 
-            List<Buku> bukus = LoadBuku();
-            Buku bukuToEdit = bukus.Find(b => b.Judul.Equals(judul));
+            List<ManajemenBukuLibraries.Buku> bukus = LoadBuku();
+            ManajemenBukuLibraries.Buku bukuToEdit = bukus.Find(b => b.Judul.Equals(judul));
             if (bukuToEdit != null)
             {
                 bukuToEdit.Penulis = newBukuData.Penulis;
@@ -80,12 +80,12 @@ namespace PustakaCeria.Menu
             }
         }
 
-        private List<Buku> LoadBuku()
+        private List<ManajemenBukuLibraries.Buku> LoadBuku()
         {
             if (File.Exists(filePath))
             {
                 string json = File.ReadAllText(filePath);
-                List<Buku> bukus = JsonConvert.DeserializeObject<List<Buku>>(json);
+                List<ManajemenBukuLibraries.Buku> bukus = JsonConvert.DeserializeObject<List<ManajemenBukuLibraries.Buku>>(json);
                 for (int i = 0; i < bukus.Count; i++)
                 {
                     bukus[i].Id = i + 1;
@@ -96,11 +96,11 @@ namespace PustakaCeria.Menu
             {
                 Console.WriteLine("File Buku.json tidak ditemukan.");
                 Console.WriteLine();
-                return new List<Buku>();
+                return new List<ManajemenBukuLibraries.Buku>();
             }
         }
 
-        private void SaveBuku(List<Buku> bukus)
+        private void SaveBuku(List<ManajemenBukuLibraries.Buku> bukus)
         {
             string json = JsonConvert.SerializeObject(bukus, Formatting.Indented);
             File.WriteAllText(filePath, json);
@@ -127,7 +127,7 @@ namespace PustakaCeria.Menu
                     case 1:
                         // Lihat buku
                         Console.WriteLine();
-                        List<Buku> daftarBuku = LihatBuku();
+                        List<ManajemenBukuLibraries.Buku> daftarBuku = LihatBuku();
                         if (daftarBuku.Count > 0)
                         {
                             foreach (var buku in daftarBuku)
@@ -149,7 +149,7 @@ namespace PustakaCeria.Menu
                         // Menambah buku baru
                         Console.WriteLine();
                         Console.WriteLine("Masukkan informasi buku baru");
-                        Buku bukuBaru = InputBuku();
+                        ManajemenBukuLibraries.Buku bukuBaru = InputBuku();
                         TambahBuku(bukuBaru);
                         Console.WriteLine("Buku berhasil ditambahkan.");
                         break;
@@ -166,7 +166,7 @@ namespace PustakaCeria.Menu
                         Console.Write("Masukkan judul buku yang akan diedit: ");
                         string judulBukuDiubah = Console.ReadLine();
                         Console.WriteLine("Masukkan informasi baru untuk buku");
-                        Buku dataBukuBaru = InputBuku();
+                        ManajemenBukuLibraries.Buku dataBukuBaru = InputBuku();
                         EditBuku(judulBukuDiubah, dataBukuBaru);
                         Console.WriteLine("Informasi buku berhasil diperbarui.");
                         break;
@@ -200,18 +200,6 @@ namespace PustakaCeria.Menu
                 }
             }
             return input;
-        }
-    }
-
-    public class Buku
-    {
-        public int Id { get; set; }
-        public string Judul { get; set; }
-        public string Penulis { get; set; }
-        public string Genre { get; set; }
-        public override string ToString()
-        {
-            return $"Id: {Id}, Judul: {Judul}, Penulis: {Penulis}, Genre: {Genre}";
         }
     }
 }
