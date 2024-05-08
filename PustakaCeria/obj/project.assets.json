@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\dhafg\\.nuget\\packages\\": {}
+    "C:\\Users\\malfa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj",
+      "projectUniqueName": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj",
       "projectName": "PustakaCeria",
-      "projectPath": "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj",
-      "packagesPath": "C:\\Users\\dhafg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dhafg\\source\\repos\\PustakaCeria\\PustakaCeria\\obj\\",
+      "projectPath": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\PustakaCeria.csproj",
+      "packagesPath": "C:\\Users\\malfa\\.nuget\\packages\\",
+      "outputPath": "E:\\kuliah\\KPL\\tubes\\PustakaCeria\\PustakaCeria\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dhafg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\malfa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -66,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
