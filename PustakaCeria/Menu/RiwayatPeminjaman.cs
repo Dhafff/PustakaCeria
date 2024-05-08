@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 
 namespace PustakaCeria.Menu
 {
@@ -29,6 +30,12 @@ namespace PustakaCeria.Menu
                 string judulBuku = dataPeminjaman[i, 1];
                 DateTime tanggalPeminjaman = DateTime.Parse(dataPeminjaman[i, 2]);
 
+                // Precondition: Tanggal peminjaman harus dalam rentang waktu yang masuk akal
+                Contract.Requires(tanggalPeminjaman <= DateTime.Now, "Tanggal peminjaman tidak valid");
+
+                // Postcondition: Setiap peminjaman yang ditambahkan harus memiliki judul buku yang tidak kosong
+                Contract.Ensures(!string.IsNullOrEmpty(judulBuku), "Judul buku tidak boleh kosong");
+
                 riwayatPeminjaman.Add(new Peminjaman(namaPeminjam, judulBuku, tanggalPeminjaman));
             }
         }
@@ -52,7 +59,15 @@ namespace PustakaCeria.Menu
         public Peminjaman(string namaPeminjam, string judulBuku, DateTime tanggalPeminjaman)
         {
             NamaPeminjam = namaPeminjam;
+
+            // Precondition: Judul buku tidak boleh kosong
+            Contract.Requires(!string.IsNullOrEmpty(judulBuku), "Judul buku tidak boleh kosong");
+
             JudulBuku = judulBuku;
+
+            // Postcondition: Tanggal peminjaman harus sesuai dengan yang diinputkan
+            Contract.Ensures(TanggalPeminjaman == tanggalPeminjaman, "Tanggal peminjaman tidak valid");
+
             TanggalPeminjaman = tanggalPeminjaman;
         }
     }
