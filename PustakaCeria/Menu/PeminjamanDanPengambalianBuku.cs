@@ -1,108 +1,198 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
+using System.Diagnostics.Contracts;
 
 namespace PustakaCeria.Menu
 {
-    public class Buku
+    public class BukuBuku
     {
-        public required string Judul { get; set; }
-        public bool Dipinjam { get; set; }
+        public string Judul { get; set; }
+        public string Pengarang { get; set; }
+        public bool SedangDipinjam { get; set; }
     }
-    public class PeminjamanDanPengambalianBuku
+
+    public class Peminjaman
     {
-        private List<Buku> daftarBuku = new List<Buku>();
+        public string Peminjam { get; set; }
+        public DateTime TanggalPinjam { get; set; }
+        public string Judul { get; set; }
+    }
 
-        public PeminjamanDanPengembalianBuku(string jsonPath)
+    public class LibraryData
+    {
+        public List<BukuBuku> DaftarBuku { get; set; } = new List<BukuBuku>();
+        public List<Peminjaman> DaftarPeminjaman { get; set; } = new List<Peminjaman>();
+    }
+
+    public class PeminjamanDanPengembalianBuku
+    {
+        private List<BukuBuku> daftarBuku;
+        private List<Peminjaman> daftarPeminjaman;
+        private readonly string filePath = "pinjambuku.json";
+
+        public PeminjamanDanPengembalianBuku()
         {
-            string jsonData = File.ReadAllText(jsonPath);
-            daftarBuku = JsonConvert.DeserializeObject<List<Buku>>(jsonData);
+            LoadData();
         }
 
-        public void TambahBuku(string judul)
+        private void LoadData()
         {
-            daftarBuku.Add(new Buku { Judul = judul, Dipinjam = false });
-        }
-
-        public void PinjamBuku(string judul)
-        {
-            Buku buku = CariBuku(judul);
-            if (buku != null)
+            if (!File.Exists(filePath))
             {
-                if (!buku.Dipinjam)
-                {
-                    buku.Dipinjam = true;
-                    Console.WriteLine($"Buku \"{judul}\" berhasil dipinjam.");
-                }
-                else
-                {
-                    Console.WriteLine($"Maaf, buku \"{judul}\" sudah dipinjam.");
-                }
+                Console.WriteLine("File not found, a new file will be created.");
+                daftarBuku = new List<BukuBuku>();
+                daftarPeminjaman = new List<Peminjaman>();
+                SaveData();
             }
             else
             {
-                Console.WriteLine($"Maaf, buku \"{judul}\" tidak ditemukan.");
-            }
-        }
-
-        public void KembalikanBuku(string judul)
-        {
-            Buku buku = CariBuku(judul);
-            if (buku != null)
-            {
-                if (buku.Dipinjam)
+                try
                 {
-                    buku.Dipinjam = false;
-                    Console.WriteLine($"Buku \"{judul}\" berhasil dikembalikan.");
+                    string json = File.ReadAllText(filePath);
+                    var data = JsonConvert.DeserializeObject<LibraryData>(json) ?? new LibraryData();
+                    daftarBuku = data.DaftarBuku;
+                    daftarPeminjaman = data.DaftarPeminjaman;
                 }
-                else
+                catch (Exception ex)
                 {
-                    Console.WriteLine($"Maaf, buku \"{judul}\" tidak sedang dipinjam.");
+                    Console.WriteLine($"Failed to load data: {ex.Message}");
+                    daftarBuku = new List<BukuBuku>();
+                    daftarPeminjaman = new List<Peminjaman>();
                 }
             }
-            else
+        }
+
+        private void SaveData()
+        {
+            try
             {
-                Console.WriteLine($"Maaf, buku \"{judul}\" tidak ditemukan.");
+                var data = new LibraryData
+                {
+                    DaftarBuku = daftarBuku,
+                    DaftarPeminjaman = daftarPeminjaman
+                };
+                string json = JsonConvert.SerializeObject(data, Formatting.Indented);
+                File.WriteAllText(filePath, json);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Failed to save data: {ex.Message}");
             }
         }
 
-        private Buku CariBuku(string judul)
+        public void PinjamBuku(string judul, string pengarang, string peminjam)
         {
-            return daftarBuku.Find(b => b.Judul == judul);
-        }
-         public void SimpanKeJSON(string jsonPath)
-        {
-            string jsonData = JsonConvert.SerializeObject(daftarBuku, Formatting.Indented);
-            File.WriteAllText(jsonPath, jsonData);
+            Contract.Requires(!string.IsNullOrEmpty(judul), "Judul buku tidak boleh kosong.");
+            Contract.Requires(!string.IsNullOrEmpty(pengarang), "Pengarang buku tidak boleh kosong.");
+            Contract.Requires(!string.IsNullOrEmpty(peminjam), "Nama peminjam tidak boleh kosong.");
+
+            var buku = daftarBuku.Find(b => b.Judul == judul && b.Pengarang == pengarang && !b.SedangDipinjam);
+            Contract.Assert(buku != null, "Buku tidak tersedia untuk dipinjam.");
+
+            buku.SedangDipinjam = true;
+            daftarPeminjaman.Add(new Peminjaman { Peminjam = peminjam, TanggalPinjam = DateTime.Now, Judul = judul });
+            SaveData();
+            Console.WriteLine("Book successfully borrowed.");
         }
 
-        public static void Main(string[] args)
+        public void KembalikanBuku(string judul, string pengarang, string peminjam)
         {
-            PeminjamanDanPengambalianBuku perpustakaan = new PeminjamanDanPengambalianBuku(jsonPath);
-            perpustakaan.PinjamBuku("Laskar Pelangi");
-            perpustakaan.PinjamBuku("Bumi Manusia");
-            perpustakaan.PinjamBuku("Dilan 1990");
-            perpustakaan.PinjamBuku("5 cm");
-            perpustakaan.PinjamBuku("Autobiografi Tan Malaka: Dari Penjara Ke Penjara");
-            perpustakaan.PinjamBuku("Atomic Habits");
-            perpustakaan.PinjamBuku("Soekarno: Biografi Singkat 1901 – 1970");
-            perpustakaan.PinjamBuku("Rudy: Kisah Masa Muda Sang Visioner");
-            perpustakaan.PinjamBuku("Autobiografi Mahatma Gandhi");
+            Contract.Requires(!string.IsNullOrEmpty(judul), "Judul buku tidak boleh kosong.");
+            Contract.Requires(!string.IsNullOrEmpty(pengarang), "Pengarang buku tidak boleh kosong.");
+            Contract.Requires(!string.IsNullOrEmpty(peminjam), "Nama peminjam tidak boleh kosong.");
 
-            perpustakaan.KembalikanBuku("Laskar Pelangi");
-            perpustakaan.KembalikanBuku("Bumi Manusia");
-            perpustakaan.KembalikanBuku("Dilan 1990");
-            perpustakaan.KembalikanBuku("5 cm");
-            perpustakaan.KembalikanBuku("Autobiografi Tan Malaka: Dari Penjara Ke Penjara");
-            perpustakaan.KembalikanBuku("Atomic Habits");
-            perpustakaan.KembalikanBuku("Soekarno: Biografi Singkat 1901 – 1970");
-            perpustakaan.KembalikanBuku("Rudy: Kisah Masa Muda Sang Visioner");
-            perpustakaan.KembalikanBuku("Autobiografi Mahatma Gandhi");
+            var buku = daftarBuku.Find(b => b.Judul == judul && b.Pengarang == pengarang && b.SedangDipinjam);
+            Contract.Assert(buku != null, "Buku tidak dapat dikembalikan karena belum dipinjam.");
 
-            perpustakaan.SimpanKeJSON(jsonPath);
-            Console.ReadLine();
+            buku.SedangDipinjam = false;
+            var peminjaman = daftarPeminjaman.FindLast(p => p.Judul == judul && p.Peminjam == peminjam);
+            Contract.Assert(peminjaman != null, "Peminjaman tidak ditemukan.");
+
+            daftarPeminjaman.Remove(peminjaman);
+            SaveData();
+            Console.WriteLine("Book successfully returned.");
         }
-        
+
+        public void TambahBuku(string judul, string pengarang)
+        {
+            Contract.Requires(!string.IsNullOrEmpty(judul), "Judul buku tidak boleh kosong.");
+            Contract.Requires(!string.IsNullOrEmpty(pengarang), "Pengarang buku tidak boleh kosong.");
+
+            daftarBuku.Add(new BukuBuku { Judul = judul, Pengarang = pengarang, SedangDipinjam = false });
+            SaveData();
+            Console.WriteLine("Book successfully added.");
+        }
+
+        public void TampilkanDaftarBuku()
+        {
+            Console.WriteLine("Daftar Buku:");
+            foreach (var buku in daftarBuku)
+            {
+                Console.WriteLine($"Judul: {buku.Judul}, Pengarang: {buku.Pengarang}, Sedang Dipinjam: {buku.SedangDipinjam}");
+            }
+        }
+
+        public void TampilkanMenuPeminjamanDanPengembalianBuku()
+        {
+            bool kembaliKeMenuUtama = false;
+            while (!kembaliKeMenuUtama)
+            {
+                Console.WriteLine("===== Menu Peminjaman dan Pengembalian Buku =====");
+                Console.WriteLine("1. Pinjam Buku");
+                Console.WriteLine("2. Kembalikan Buku");
+                Console.WriteLine("3. Tambah Buku");
+                Console.WriteLine("4. Tampilkan Daftar Buku");
+                Console.WriteLine("0. Kembali ke Menu Utama");
+                Console.Write("Masukkan nomor menu yang dipilih: ");
+                int pilihan = int.Parse(Console.ReadLine());
+
+                switch (pilihan)
+                {
+                    case 1:
+                        Console.Write("Masukkan judul buku: ");
+                        string judulPinjam = Console.ReadLine();
+                        Console.Write("Masukkan pengarang buku: ");
+                        string pengarangPinjam = Console.ReadLine();
+                        Console.Write("Masukkan nama peminjam: ");
+                        string peminjamPinjam = Console.ReadLine();
+                        PinjamBuku(judulPinjam, pengarangPinjam, peminjamPinjam);
+                        break;
+                    case 2:
+                        Console.Write("Masukkan judul buku: ");
+                        string judulKembali = Console.ReadLine();
+                        Console.Write("Masukkan pengarang buku: ");
+                        string pengarangKembali = Console.ReadLine();
+                        Console.Write("Masukkan nama peminjam: ");
+                        string peminjamKembali = Console.ReadLine();
+                        KembalikanBuku(judulKembali, pengarangKembali, peminjamKembali);
+                        break;
+                    case 3:
+                        Console.Write("Masukkan judul buku: ");
+                        string judulTambah = Console.ReadLine();
+                        Console.Write("Masukkan pengarang buku: ");
+                        string pengarangTambah = Console.ReadLine();
+                        TambahBuku(judulTambah, pengarangTambah);
+                        break;
+                    case 4:
+                        TampilkanDaftarBuku();
+                        break;
+                    case 0:
+                        kembaliKeMenuUtama = true;
+                        break;
+                    default:
+                        Console.WriteLine("Pilihan tidak valid. Silakan coba lagi.");
+                        break;
+                }
+
+                if (!kembaliKeMenuUtama)
+                {
+                    Console.WriteLine("Tekan tombol apa pun untuk kembali ke menu peminjaman dan pengembalian.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
+        }
     }
 }

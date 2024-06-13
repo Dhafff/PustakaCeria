@@ -209,6 +209,9 @@ namespace PustakaCeria.Menu
         public string Judul { get; set; }
         public string Penulis { get; set; }
         public string Genre { get; set; }
+        public string Pengarang { get; internal set; }
+        public bool SedangDipinjam { get; internal set; }
+
         public override string ToString()
         {
             return $"Id: {Id}, Judul: {Judul}, Penulis: {Penulis}, Genre: {Genre}";
